@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal view</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @media only screen and (min-device-width:250px) and (max-device-width:799px) {
+        .content{
+            font-size: 2.5vmin;
+        }
+        .heading h1{
+            font-size: 3.5vmin;
+        }
+    }
+    @media only screen and (min-device-width:800px) and (max-device-width:1500px){
+        :root{
+            --val:20vh;
+        }
+        .overlay{
+            backdrop-filter: blur(2px);
+        }
+        .content{
+            font-size: 2.5vmin;
+        }
+        .heading h1{
+            font-size: 3.5vmin;
+        }
+        .btn{
+            padding: 1.25vw 2vw;
+            font-size: 2.5vh;
+        }
+        .container{
+            height: 60vh;
+        }
+        .modal-description{
+            width: 60vh;
+        }
+        .wrapper{
+            padding-top: 2.5vh;
+        }
+    }
+    @media only screen and (min-device-width:1501px) {
+        :root{
+            --val:20vh;
+        }
+        .content{
+            font-size: 2.5vmin;
+        }
+        .heading h1{
+            font-size: 3.5vmin;
+        }
+        .btn{
+            font-size: 2.5vmin;
+        }
+        .container{
+            height: 50vh;
+        }
+        .modal-description{
+            width: 90vh;
+        }
+        .hidden-for-mobile{
+            display: block;
+        }
+        .wrapper{
+            padding-top: 3.5vh;
+        }
+        .overlay{
+            backdrop-filter: blur(2px);
+        }
+    }
+</style>
+<body>
+    <div class="overlay hidden"></div>
+    <div class="wrapper">
+        <div class="buttonHolder">
+            <div class="item"><button class="btn">Show Modal 1</button></div>
+            <div class="item"><button class="btn">Show Modal 2</button></div>
+            <div class="item"><button class="btn">Show Modal 3</button></div>
+        </div>
+        <div class="container">
+            <div class="modal-description hidden">
+                <div class="escape">&times;</div>
+                <div class="heading"><h1>Hi! I am Modal </h1></div>
+                <div class="content"><p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, amet asperiores. Laborum labore numquam assumenda eos consectetur fuga saepe molestiae facere deleniti distinctio fugit odio sint corporis, doloremque illo quos fugiat eum nostrum, ratione dolor facilis voluptatem voluptates quasi nam. <span class="hidden-for-mobile">Commodi cupiditate laborum quia, iure vel voluptate nobis non amet distinctio alias qui sit maiores tenetur, officia hic minus ullam explicabo ea dicta? Quos impedit, ratione iure et distinctio quidem ex provident animi quo assumenda quaerat facere sint ipsam officiis.</span></p></div>
+            </div>
+        </div> <!--container div ends-->
+        
+    </div> <!--wrapper class ends-->
+    <script src="script.js"></script>
+</body>
+</html>
